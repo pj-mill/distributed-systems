@@ -32,7 +32,7 @@
             <configuration>
                 <archive>
                     <manifest>
-                        <mainClass>LeaderElection</mainClass>
+                        <mainClass>Program</mainClass>
                     </manifest>
                 </archive>
                 <descriptorRefs>

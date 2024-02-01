@@ -15,23 +15,22 @@ public class LeaderElection implements Watcher {
     private ZooKeeper zooKeeper;
     private String currentZnodeName;
 
-    public static void main(String[] arg) throws IOException, InterruptedException, KeeperException {
-        LeaderElection leaderElection = new LeaderElection();
-
-        leaderElection.connectToZookeeper();
-        leaderElection.volunteerForLeadership();
-        leaderElection.electLeader();
-        leaderElection.run();
-        leaderElection.close();
+    public LeaderElection() throws IOException, KeeperException, InterruptedException {
+        super();
+        this.connectToZookeeper();
+        this.volunteerForLeadership();
+        this.electLeader();
+        this.run();
+        this.close();
         System.out.println("Disconnected from Zookeeper, exiting application");
     }
 
     public void volunteerForLeadership() throws KeeperException, InterruptedException {
         String znodePrefix = ELECTION_NAMESPACE + "/c_";
-        zooKeeper.create(znodePrefix, new byte[]{}, ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
+        String znodeFullPath = zooKeeper.create(znodePrefix, new byte[]{}, ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
 
         System.out.println("Created znode " + znodePrefix);
-        this.currentZnodeName = znodePrefix.replace(ELECTION_NAMESPACE + "/", "");
+        this.currentZnodeName = znodeFullPath.replace(ELECTION_NAMESPACE + "/", "");
     }
 
     public void electLeader() throws KeeperException, InterruptedException {
