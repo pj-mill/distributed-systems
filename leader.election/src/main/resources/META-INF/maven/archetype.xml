@@ -1,7 +1,0 @@
-<archetype>
-  <id>leader.election</id>
-  <sources>
-    <source>src/main/java/LeaderElection.java</source>
-  </sources>
-  <testSources></testSources>
-</archetype>
