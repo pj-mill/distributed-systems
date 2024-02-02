@@ -1,4 +1,6 @@
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.zookeeper.*;
 
 import java.io.IOException;
@@ -15,6 +17,8 @@ public class LeaderElection implements Watcher {
     private ZooKeeper zooKeeper;
     private String currentZnodeName;
 
+    private static final Logger logger = LogManager.getLogger(LeaderElection.class);
+    
     public LeaderElection() throws IOException, KeeperException, InterruptedException {
         super();
         this.connectToZookeeper();
@@ -22,14 +26,14 @@ public class LeaderElection implements Watcher {
         this.electLeader();
         this.run();
         this.close();
-        System.out.println("Disconnected from Zookeeper, exiting application");
+        logger.warn("Disconnected from Zookeeper, exiting application");
     }
 
     public void volunteerForLeadership() throws KeeperException, InterruptedException {
         String znodePrefix = ELECTION_NAMESPACE + "/c_";
         String znodeFullPath = zooKeeper.create(znodePrefix, new byte[]{}, ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
 
-        System.out.println("Created znode " + znodePrefix);
+        logger.info("Created znode " + znodeFullPath);
         this.currentZnodeName = znodeFullPath.replace(ELECTION_NAMESPACE + "/", "");
     }
 
@@ -40,11 +44,11 @@ public class LeaderElection implements Watcher {
         String smallestChild = children.get(0);
 
         if (smallestChild.equals(currentZnodeName)) {
-            System.out.println("I am the leader");
+            logger.info("I am the leader");
             return;
         }
         
-        System.out.println("I am not the leader, " + smallestChild + " is the leader");
+        logger.info("I am not the leader, " + smallestChild + " is the leader");
     }
 
     public void connectToZookeeper() throws IOException {
@@ -66,10 +70,10 @@ public class LeaderElection implements Watcher {
         switch (event.getType()) {
             case None:
                 if (event.getState() == Event.KeeperState.SyncConnected) {
-                    System.out.println("Successfully connected to Zookeeper");
+                    logger.info("Successfully connected to Zookeeper");
                 } else {
                     synchronized (zooKeeper) {
-                        System.out.println("Disconnected from Zookeeper event");
+                        logger.info("Disconnected from Zookeeper event");
                         zooKeeper.notifyAll();
                     }
                 }
