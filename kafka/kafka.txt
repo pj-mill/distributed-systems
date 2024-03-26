@@ -1,0 +1,50 @@
+Kafka Notes
+
+Run zookeeper cluster
+--------------------------------
+zookeeper-server-start ../../config/zookeeper.properties
+
+run kafka broker
+--------------------------------
+kafka-server-start ../../config/server.properties
+kafka-server-start ../../config/server-1.properties
+kafka-server-start ../../config/server-2.properties
+
+Create topic
+--------------------------------
+(no replication, no partitioning)
+kafka-topics --create --bootstrap-server 127.0.0.1:9092 --replication-factor 1 --partitions 1 --topic chat
+
+(with replication, with partitioning)
+kafka-topics --create --bootstrap-server 127.0.0.1:9092 --replication-factor 3 --partitions 3 --topic purchases
+
+kafka-topics --create --bootstrap-server 127.0.0.1:9092 --replication-factor 1 --partitions 1 --topic chat
+
+
+List topics
+--------------------------------
+kafka-topics --list --bootstrap-server 127.0.0.1:9092
+
+Describe topics
+--------------------------------
+kafka-topics --describe --bootstrap-server 127.0.0.1:9092 --topic chat
+kafka-topics --describe --bootstrap-server 127.0.0.1:9092 --topic purchases
+
+
+Publish Message (no consumers yet)
+--------------------------------
+kafka-console-producer --broker-list 127.0.0.1:9092 --topic chat
+first message
+second message
+
+
+kafka-console-producer --broker-list 127.0.0.1:9092 --topic purchases
+purchase 1
+purchase 2
+purchase 3
+purchase 4
+
+
+Consume Messages
+--------------------------------
+kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic purchases --from-beginning
