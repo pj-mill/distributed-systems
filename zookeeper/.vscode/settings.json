@@ -1,0 +1,5 @@
+{
+    "java.configuration.updateBuildConfiguration": "disabled",
+    "java.project.sourcePaths": ["service-registry", "Service-Registry/src/main/java/cluster"],
+    "java.debug.settings.onBuildFailureProceed": true
+}

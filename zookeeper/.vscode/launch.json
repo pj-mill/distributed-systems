@@ -6,16 +6,30 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Application",
+            "request": "launch",
+            "mainClass": "Application",
+            "projectName": "distributed-systems_3cce532a"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
         },
         {
             "type": "java",
-            "name": "Program",
+            "name": "Leader",
             "request": "launch",
             "mainClass": "Program",
             "projectName": "distributed.systems-leader.election"
+        },
+        {
+            "type": "java",
+            "name": "Service Registry",
+            "request": "launch",
+            "mainClass": ".cluster.Main",
+            "projectName": "service-registry"
         }
     ]
 }
