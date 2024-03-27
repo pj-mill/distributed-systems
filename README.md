@@ -23,3 +23,7 @@ Project work based on course - Distributed Systems & Cloud Computing with Java b
 #### Consuming Messages
 
 ![Producing Messages](https://github.com/pj-mill/distributed-systems/blob/master/kafka/screenshots/consuming%20records.PNG)
+
+#### Fault Tolerence
+
+![Fault Tolerence](https://github.com/pj-mill/distributed-systems/blob/master/kafka/screenshots/kafka-fault-tolerance.PNG)
