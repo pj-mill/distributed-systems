@@ -7,6 +7,8 @@ Michael Pogrebinsky - Distributed Systems & Cloud Computing with Java
 [Fatih Karabiber - TF-IDF — Term Frequency-Inverse Document Frequency] (
 https://www.learndatasci.com/glossary/tf-idf-term-frequency-inverse-document-frequency/#:~:text=Term%20Frequency%20%2D%20Inverse%20Document%20Frequency%20(TF%2DIDF)%20is,%2C%20relative%20to%20a%20corpus).)
 
+### Intro
+
 In a typical search problem as an input to our system, ahead of time, we have a large set of documents which can be books, academic articles, legal documents, or websites.
 a user then provides us with a search query in real time to get the most relevant documents or links to their search.
 Based on that search query, we want to identify which documents are more relevant and which are less relevant and present all those results to the user.
@@ -47,3 +49,25 @@ TF of a term or word is the number of times the term appears in a document compa
 IDF of a term reflects the proportion of documents in the corpus that contain the term. Words unique to a small percentage of documents (e.g., technical jargon terms) receive higher importance values than words common across all documents (e.g., a, the, and).
 
 TD-IDF = TF \* IDF
+
+##### Implementatiom
+
+We'll implement a Parallel Term Frequency Algorithm so that we can run the searches in parallel within a cluster
+This is as follows
+
+1. The leader will take the documents and split them evenly among the nodes.
+2. Then the leader will send a task to each node.
+3. The task contains all the terms and the subset of documents allocated to that particular node
+4. Each node that will create a map for each document allocated to it
+5. Each of those maps will map from a search term to its term frequency inthat particular document
+6. Then each node will aggregate all the document data objects for all its allocated documents and send the results back to the leader
+7. At point the leader will have all the term frequencies for all the terms in all the documents at the final aggregation step
+8. The leader will calculate the IDF for all the terms which is easy to derive from the term frequencies
+9. Finally it will score the documents and sort them in descending order
+
+Overall, we will have a frontend server that will communicate with a backend cluster. Within the cluster we will have...
+
+1. A coordinator node (zookeeper leader node)
+2. Several worker nodes who will register themselves with the leader via a service registry.
+3. The coordinator will also register itself to this registery so that the frontend service knows where to send the search query.
+4.
