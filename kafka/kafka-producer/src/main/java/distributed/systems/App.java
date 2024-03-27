@@ -10,17 +10,8 @@ import org.apache.kafka.common.serialization.StringSerializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
-    // public static void main( String[] args )
-    // {
-    //     System.out.println( "Hello World!" );
-    // }
-
     private static final Logger logger = LogManager.getLogger(App.class);
 
     // Define the Kafka topic we're going to send messages to
@@ -30,13 +21,6 @@ public class App
     private static final String BOOTSTRAP_SERVERS = "127.0.0.1:9092,127.0.0.1:9093,127.0.0.1:9094";
 
     public static void main(String[] args) {
-        // logger.trace("We've just greeted the user!");
-        // logger.debug("We've just greeted the user!");
-        // logger.info("We've just greeted the user!");
-        // logger.warn("We've just greeted the user!");
-        // logger.error("We've just greeted the user!");
-        // logger.fatal("We've just greeted the user!");
-
         Producer<Long, String> kafkaProducer = createKafkaProducer(BOOTSTRAP_SERVERS);
 
         try {
@@ -51,25 +35,20 @@ public class App
 
     public static void produceMessages(int numberOfMessages, Producer<Long, String> kafkaProducer) throws ExecutionException, InterruptedException {
         // define the partition we're going to send messages to
-        int partition = 0;
+        //int partition = 0;
 
         // create a loop which will have as many iterations as the number of messages
         for (int i = 0; i < numberOfMessages; i++) {
-            logger.debug("Creating Message! "+ numberOfMessages) ;
             long key = i;
             String value = String.format("event %d", i);
 
-            long timeStamp = System.currentTimeMillis();
+            //long timeStamp = System.currentTimeMillis();
 
-            // create a producer record
-            ProducerRecord<Long, String> record = new ProducerRecord<>(TOPIC, partition, timeStamp, key, value);
+            // Create a producer record (specifying partition)
+            // ProducerRecord<Long, String> record = new ProducerRecord<>(TOPIC, partition, timeStamp, key, value);
 
-            //String msg = String.format("Record with (key: %s, value: %s), was sent to (partition: %d, offset: %d",
-            //record.key(), record.value(), recordMetadata.partition(), recordMetadata.offset());
-
-            //System.out.println(msg);
-
-            //logger.info(msg);
+            // Create a producer record (without specifying partition)
+            ProducerRecord<Long, String> record = new ProducerRecord<>(TOPIC, key, value);
 
             // send the record to the Kafka topic
             // RecordMetadata tells us where that record has landed in our distributed Kafka topic
@@ -81,24 +60,15 @@ public class App
                             System.out.println("Error producing to topic " + recordMetadata.topic());
                             e.printStackTrace();
                         }
+                        else {
+                            logger.info(String.format("Record with (key: %s, value: %s), was sent to (partition: %d, offset: %d",
+                            record.key(), record.value(), recordMetadata.partition(), recordMetadata.offset()));
+                        }
                     }
                 }).get();
             } catch (InterruptedException e) {
                 logger.error(e.getMessage());
-                //e.printStackTrace();
             }
-            //RecordMetadata recordMetadata = kafkaProducer.send(record).get();
-
-            // System.out.println(String.format("Record with (key: %s, value: %s), was sent to (partition: %d, offset: %d",
-            //         record.key(), record.value(), recordMetadata.partition(), recordMetadata.offset()));
-
-            //String msg = String.format("Record with (key: %s, value: %s), was sent to (partition: %d, offset: %d",
-            //record.key(), record.value(), recordMetadata.partition(), recordMetadata.offset());
-
-            //System.out.println(msg);
-
-            //logger.info(msg);
-
         }
     }
 
