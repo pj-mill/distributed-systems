@@ -1,9 +1,15 @@
 ## Distributed Search Engine.
 
+### Resourses
+
+Michael Pogrebinsky - Distributed Systems & Cloud Computing with Java
+[Fatih Karabiber - TF-IDF — Term Frequency-Inverse Document Frequency] (
+https://www.learndatasci.com/glossary/tf-idf-term-frequency-inverse-document-frequency/#:~:text=Term%20Frequency%20%2D%20Inverse%20Document%20Frequency%20(TF%2DIDF)%20is,%2C%20relative%20to%20a%20corpus).)
+
 In a typical search problem as an input to our system, ahead of time, we have a large set of documents which can be books, academic articles, legal documents, or websites.
 a user then provides us with a search query in real time to get the most relevant documents or links to their search.
 Based on that search query, we want to identify which documents are more relevant and which are less relevant and present all those results to the user.
-There are a number of ways we can achieve this, but in the end we have chose the TD-IDF (Term Frequency - Inverse Document Frequency) algorithm as explained below.
+There are a number of ways we can achieve this, but in the end we have chosen the TD-IDF (Term Frequency - Inverse Document Frequency) algorithm as explained below.
 
 ### Search Term Count
 
