@@ -1,0 +1,29 @@
+2024-03-27 12:22:31.360 [main] INFO  distributed.systems.App - Consumer is part of consumer group defaultConsumerGroup
+2024-03-27 12:22:32.607 [main] INFO  distributed.systems.App - No new records found
+2024-03-27 12:22:33.632 [main] INFO  distributed.systems.App - No new records found
+2024-03-27 12:22:34.647 [main] INFO  distributed.systems.App - No new records found
+2024-03-27 12:22:35.664 [main] INFO  distributed.systems.App - No new records found
+2024-03-27 12:22:36.678 [main] INFO  distributed.systems.App - No new records found
+2024-03-27 12:22:37.690 [main] INFO  distributed.systems.App - No new records found
+2024-03-27 12:22:38.707 [main] INFO  distributed.systems.App - No new records found
+2024-03-27 12:22:39.708 [main] INFO  distributed.systems.App - No new records found
+2024-03-27 12:22:40.721 [main] INFO  distributed.systems.App - No new records found
+2024-03-27 12:22:41.735 [main] INFO  distributed.systems.App - No new records found
+2024-03-27 12:22:42.749 [main] INFO  distributed.systems.App - No new records found
+2024-03-27 12:22:43.763 [main] INFO  distributed.systems.App - No new records found
+2024-03-27 12:22:44.772 [main] INFO  distributed.systems.App - No new records found
+2024-03-27 12:22:45.785 [main] INFO  distributed.systems.App - No new records found
+2024-03-27 12:22:46.795 [main] INFO  distributed.systems.App - No new records found
+2024-03-27 12:22:47.806 [main] INFO  distributed.systems.App - No new records found
+2024-03-27 12:22:48.818 [main] INFO  distributed.systems.App - No new records found
+2024-03-27 12:22:49.037 [main] INFO  distributed.systems.App - Received record (key: null, value: message 8, partition: 0, offset: 47
+2024-03-27 12:22:50.046 [main] INFO  distributed.systems.App - No new records found
+2024-03-27 12:22:51.057 [main] INFO  distributed.systems.App - No new records found
+2024-03-27 12:22:52.067 [main] INFO  distributed.systems.App - No new records found
+2024-03-27 12:22:53.079 [main] INFO  distributed.systems.App - No new records found
+2024-03-27 12:22:54.082 [main] INFO  distributed.systems.App - No new records found
+2024-03-27 12:22:55.097 [main] INFO  distributed.systems.App - No new records found
+2024-03-27 12:22:56.108 [main] INFO  distributed.systems.App - No new records found
+2024-03-27 12:22:57.120 [main] INFO  distributed.systems.App - No new records found
+2024-03-27 12:22:58.129 [main] INFO  distributed.systems.App - No new records found
+2024-03-27 12:22:59.139 [main] INFO  distributed.systems.App - No new records found
