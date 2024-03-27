@@ -29,7 +29,7 @@ Describe topics
 --------------------------------
 kafka-topics --describe --bootstrap-server 127.0.0.1:9092 --topic chat
 kafka-topics --describe --bootstrap-server 127.0.0.1:9092 --topic purchases
-
+kafka-topics --describe --bootstrap-server 127.0.0.1:9092 --topic events
 
 Publish Message (no consumers yet)
 --------------------------------

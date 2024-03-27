@@ -1,0 +1,37 @@
+2024-03-26 16:19:23.389 [main] DEBUG distributed.systems.App - We've just greeted the user!
+2024-03-26 16:19:23.393 [main] INFO  distributed.systems.App - We've just greeted the user!
+2024-03-26 16:19:23.394 [main] WARN  distributed.systems.App - We've just greeted the user!
+2024-03-26 16:19:23.394 [main] ERROR distributed.systems.App - We've just greeted the user!
+2024-03-26 16:19:23.394 [main] FATAL distributed.systems.App - We've just greeted the user!
+2024-03-26 16:21:32.346 [main] DEBUG distributed.systems.App - Creating Message!
+2024-03-26 16:32:25.127 [main] DEBUG distributed.systems.App - Creating Message! 
+2024-03-26 16:32:25.491 [main] DEBUG distributed.systems.App - Creating Message! 
+2024-03-26 16:32:25.495 [main] DEBUG distributed.systems.App - Creating Message! 
+2024-03-26 16:32:25.497 [main] DEBUG distributed.systems.App - Creating Message! 
+2024-03-26 16:32:25.499 [main] DEBUG distributed.systems.App - Creating Message! 
+2024-03-26 16:32:25.501 [main] DEBUG distributed.systems.App - Creating Message! 
+2024-03-26 16:32:25.503 [main] DEBUG distributed.systems.App - Creating Message! 
+2024-03-26 16:32:25.506 [main] DEBUG distributed.systems.App - Creating Message! 
+2024-03-26 16:32:25.509 [main] DEBUG distributed.systems.App - Creating Message! 
+2024-03-26 16:32:25.512 [main] DEBUG distributed.systems.App - Creating Message! 
+2024-03-26 16:31:27.003 [main] DEBUG distributed.systems.App - Creating Message! 
+2024-03-26 16:33:29.034 [main] DEBUG distributed.systems.App - Creating Message! 10
+2024-03-26 16:33:29.370 [main] DEBUG distributed.systems.App - Creating Message! 10
+2024-03-26 16:33:29.373 [main] DEBUG distributed.systems.App - Creating Message! 10
+2024-03-26 16:33:29.375 [main] DEBUG distributed.systems.App - Creating Message! 10
+2024-03-26 16:33:29.377 [main] DEBUG distributed.systems.App - Creating Message! 10
+2024-03-26 16:33:29.379 [main] DEBUG distributed.systems.App - Creating Message! 10
+2024-03-26 16:33:29.381 [main] DEBUG distributed.systems.App - Creating Message! 10
+2024-03-26 16:33:29.383 [main] DEBUG distributed.systems.App - Creating Message! 10
+2024-03-26 16:33:29.386 [main] DEBUG distributed.systems.App - Creating Message! 10
+2024-03-26 16:33:29.388 [main] DEBUG distributed.systems.App - Creating Message! 10
+2024-03-26 16:34:07.809 [main] DEBUG distributed.systems.App - Creating Message! 10
+2024-03-26 16:34:08.142 [main] DEBUG distributed.systems.App - Creating Message! 10
+2024-03-26 16:34:08.145 [main] DEBUG distributed.systems.App - Creating Message! 10
+2024-03-26 16:34:08.147 [main] DEBUG distributed.systems.App - Creating Message! 10
+2024-03-26 16:34:08.149 [main] DEBUG distributed.systems.App - Creating Message! 10
+2024-03-26 16:34:08.151 [main] DEBUG distributed.systems.App - Creating Message! 10
+2024-03-26 16:34:08.152 [main] DEBUG distributed.systems.App - Creating Message! 10
+2024-03-26 16:34:08.154 [main] DEBUG distributed.systems.App - Creating Message! 10
+2024-03-26 16:34:08.157 [main] DEBUG distributed.systems.App - Creating Message! 10
+2024-03-26 16:34:08.159 [main] DEBUG distributed.systems.App - Creating Message! 10
