@@ -69,5 +69,4 @@ Overall, we will have a frontend server that will communicate with a backend clu
 
 1. A coordinator node (zookeeper leader node)
 2. Several worker nodes who will register themselves with the leader via a service registry.
-3. The coordinator will also register itself to this registery so that the frontend service knows where to send the search query.
-4.
+3. The coordinator will also register itself to a coordinator registery so that the frontend service knows where to send the search query.
