@@ -7,7 +7,7 @@ Project work based on course - Distributed Systems & Cloud Computing with Java b
 [Hadoop Zookeeper](https://zookeeper.apache.org/doc/r3.3.3/zookeeperAdmin.html)
 
 [Kafka](https://kafka.apache.org/)
-
+P
 [Spiceworks - What is Kafka](https://www.spiceworks.com/tech/data-management/articles/what-is-kafka/)
 
 ## Kafka
