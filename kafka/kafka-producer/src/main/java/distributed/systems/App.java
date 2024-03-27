@@ -39,7 +39,7 @@ public class App
 
         // create a loop which will have as many iterations as the number of messages
         for (int i = 0; i < numberOfMessages; i++) {
-            long key = i;
+            //long key = i;
             String value = String.format("event %d", i);
 
             //long timeStamp = System.currentTimeMillis();
@@ -48,7 +48,7 @@ public class App
             // ProducerRecord<Long, String> record = new ProducerRecord<>(TOPIC, partition, timeStamp, key, value);
 
             // Create a producer record (without specifying partition)
-            ProducerRecord<Long, String> record = new ProducerRecord<>(TOPIC, key, value);
+            ProducerRecord<Long, String> record = new ProducerRecord<>(TOPIC, value);
 
             // send the record to the Kafka topic
             // RecordMetadata tells us where that record has landed in our distributed Kafka topic

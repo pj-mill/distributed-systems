@@ -28,3 +28,13 @@
 2024-03-27 11:12:03.936 [kafka-producer-network-thread | events-producer] INFO  distributed.systems.App - Record with (key: 7, value: event 7), was sent to (partition: 0, offset: 27
 2024-03-27 11:12:03.939 [kafka-producer-network-thread | events-producer] INFO  distributed.systems.App - Record with (key: 8, value: event 8), was sent to (partition: 0, offset: 28
 2024-03-27 11:12:03.942 [kafka-producer-network-thread | events-producer] INFO  distributed.systems.App - Record with (key: 9, value: event 9), was sent to (partition: 0, offset: 29
+2024-03-27 11:15:03.726 [kafka-producer-network-thread | events-producer] INFO  distributed.systems.App - Record with (key: null, value: event 0), was sent to (partition: 0, offset: 30
+2024-03-27 11:15:03.734 [kafka-producer-network-thread | events-producer] INFO  distributed.systems.App - Record with (key: null, value: event 1), was sent to (partition: 0, offset: 31
+2024-03-27 11:15:03.737 [kafka-producer-network-thread | events-producer] INFO  distributed.systems.App - Record with (key: null, value: event 2), was sent to (partition: 0, offset: 32
+2024-03-27 11:15:03.740 [kafka-producer-network-thread | events-producer] INFO  distributed.systems.App - Record with (key: null, value: event 3), was sent to (partition: 0, offset: 33
+2024-03-27 11:15:03.743 [kafka-producer-network-thread | events-producer] INFO  distributed.systems.App - Record with (key: null, value: event 4), was sent to (partition: 0, offset: 34
+2024-03-27 11:15:03.746 [kafka-producer-network-thread | events-producer] INFO  distributed.systems.App - Record with (key: null, value: event 5), was sent to (partition: 0, offset: 35
+2024-03-27 11:15:03.749 [kafka-producer-network-thread | events-producer] INFO  distributed.systems.App - Record with (key: null, value: event 6), was sent to (partition: 0, offset: 36
+2024-03-27 11:15:03.751 [kafka-producer-network-thread | events-producer] INFO  distributed.systems.App - Record with (key: null, value: event 7), was sent to (partition: 0, offset: 37
+2024-03-27 11:15:03.753 [kafka-producer-network-thread | events-producer] INFO  distributed.systems.App - Record with (key: null, value: event 8), was sent to (partition: 0, offset: 38
+2024-03-27 11:15:03.756 [kafka-producer-network-thread | events-producer] INFO  distributed.systems.App - Record with (key: null, value: event 9), was sent to (partition: 0, offset: 39
