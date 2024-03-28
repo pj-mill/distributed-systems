@@ -1,12 +1,5 @@
 ## Distributed Search Engine.
 
-### Resourses
-
-Michael Pogrebinsky - Distributed Systems & Cloud Computing with Java
-
-[Fatih Karabiber - TF-IDF — Term Frequency-Inverse Document Frequency] (
-https://www.learndatasci.com/glossary/tf-idf-term-frequency-inverse-document-frequency/#:~:text=Term%20Frequency%20%2D%20Inverse%20Document%20Frequency%20(TF%2DIDF)%20is,%2C%20relative%20to%20a%20corpus).)
-
 ### Intro
 
 In a typical search problem as an input to our system, ahead of time, we have a large set of documents which can be books, academic articles, legal documents, or websites.
@@ -70,3 +63,18 @@ Overall, we will have a frontend server that will communicate with a backend clu
 1. A coordinator node (zookeeper leader node)
 2. Several worker nodes who will register themselves with the leader via a service registry.
 3. The coordinator will also register itself to a coordinator registery so that the frontend service knows where to send the search query.
+
+#### Search Queries
+
+![Search Queries](https://github.com/pj-mill/distributed-systems/blob/master/kafka/screenshots/kafka-fault-tolerance.PNG)
+
+#### Search Results
+
+![Search Results](https://github.com/pj-mill/distributed-systems/blob/master/kafka/screenshots/kafka-fault-tolerance.PNG)
+
+### Resourses
+
+Michael Pogrebinsky - Distributed Systems & Cloud Computing with Java
+
+[Fatih Karabiber - TF-IDF — Term Frequency-Inverse Document Frequency] (
+https://www.learndatasci.com/glossary/tf-idf-term-frequency-inverse-document-frequency/#:~:text=Term%20Frequency%20%2D%20Inverse%20Document%20Frequency%20(TF%2DIDF)%20is,%2C%20relative%20to%20a%20corpus).)

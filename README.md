@@ -27,3 +27,15 @@ P
 #### Fault Tolerence
 
 ![Fault Tolerence](https://github.com/pj-mill/distributed-systems/blob/master/kafka/screenshots/kafka-fault-tolerance.PNG)
+
+## Scope
+
+1. Cluster Coordination & Leader Election with Apache Zookeeper
+1. Watchers, Triggers & Failure Detection
+1. Leader Re-Election (Auto Healer)
+1. Scalability & Fault Taolerence
+1. Cluster management through Service Registry & Discovery
+1. Load Balancing Strategies
+1. Message Brokers, prodcuers & consumers through Kafka
+1. Publish / Subscribe pattern
+1.
