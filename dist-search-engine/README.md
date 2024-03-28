@@ -78,3 +78,5 @@ Michael Pogrebinsky - Distributed Systems & Cloud Computing with Java
 
 [Fatih Karabiber - TF-IDF — Term Frequency-Inverse Document Frequency] (
 https://www.learndatasci.com/glossary/tf-idf-term-frequency-inverse-document-frequency/#:~:text=Term%20Frequency%20%2D%20Inverse%20Document%20Frequency%20(TF%2DIDF)%20is,%2C%20relative%20to%20a%20corpus).)
+
+protoc command: C:/Devs/Java/protoc-26.1-win64/bin/protoc --java_out=./src/main/java/distributed/systems ./src/main/java/distributed/systems/models/proto/search_cluster_protos.proto

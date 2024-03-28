@@ -9,4 +9,6 @@ public class Constants {
     public static final String SEARCH_WORKER_ENDPOINT = "/task";
     public static final String ZOOKEEPER_ADDRESS = "127.0.0.1:2181";
     public static final int SESSION_TIMEOUT = 3000;
+    public static final String SEARCH_COORDINATOR_ENDPOINT = "/search";
+    public static final String BOOKS_DIRECTORY = "./resources/books/";
 }

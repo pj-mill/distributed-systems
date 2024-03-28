@@ -8,25 +8,11 @@ Project work based on course - Distributed Systems & Cloud Computing with Java b
 
 [Kafka](https://kafka.apache.org/)
 
-[Spiceworks - What is Kafka](https://www.spiceworks.com/tech/data-management/articles/what-is-kafka/)
+[HAProxy](https://www.haproxy.org/)
 
-## Kafka
+[HAProxy Configuration](https://cbonte.github.io/haproxy-dconv/1.7/configuration.html#7.1)
 
-#### Topic Creation
-
-![Topic Creation](https://github.com/pj-mill/distributed-systems/blob/master/kafka/screenshots/kafka-topic-creation.PNG)
-
-#### Producing Messages
-
-![Producing Messages](https://github.com/pj-mill/distributed-systems/blob/master/kafka/screenshots/producing%20messages.PNG)
-
-#### Consuming Messages
-
-![Producing Messages](https://github.com/pj-mill/distributed-systems/blob/master/kafka/screenshots/consuming%20records.PNG)
-
-#### Fault Tolerence
-
-![Fault Tolerence](https://github.com/pj-mill/distributed-systems/blob/master/kafka/screenshots/kafka-fault-tolerance.PNG)
+[Protocol Buffers](https://protobuf.dev/overview/)
 
 ## Scope
 
@@ -38,4 +24,30 @@ Project work based on course - Distributed Systems & Cloud Computing with Java b
 1. Load Balancing Strategies wityh HAProxy
 1. Message Brokers, producers & consumers with Kafka
 1. Publish / Subscribe pattern
-1.
+1. Static & Dynamic Loading Balancing Algorithms
+
+## Sample Screenshots
+
+#### Topic Creation (Kafka)
+
+![Topic Creation](https://github.com/pj-mill/distributed-systems/blob/master/kafka/screenshots/kafka-topic-creation.PNG)
+
+#### Producing Messages (Kafka)
+
+![Producing Messages](https://github.com/pj-mill/distributed-systems/blob/master/kafka/screenshots/producing%20messages.PNG)
+
+#### Consuming Messages (Kafka)
+
+![Producing Messages](https://github.com/pj-mill/distributed-systems/blob/master/kafka/screenshots/consuming%20records.PNG)
+
+#### Fault Tolerence (Kafka)
+
+![Fault Tolerence](https://github.com/pj-mill/distributed-systems/blob/master/kafka/screenshots/kafka-fault-tolerance.PNG)
+
+#### Search Queries
+
+![Search Queries](https://github.com/pj-mill/distributed-systems/blob/master/dist-search-engine/screenshots/search-queries.PNG)
+
+#### Search Results
+
+![Search Results](https://github.com/pj-mill/distributed-systems/blob/master/dist-search-engine/screenshots/search-results.PNG)

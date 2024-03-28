@@ -74,4 +74,8 @@ public class WebServer {
         outputStream.flush();
         outputStream.close();
     }
+
+    public void stop() {
+        server.stop(10);
+    }    
 }
