@@ -34,7 +34,7 @@ public class AppTest
     @Test
     public void shouldBeAliceInWonderland() throws IOException
     {
-        File documentsDirectoy = new File(constants.RESOURCES_LOCATION);
+        File documentsDirectoy = new File(Constants.RESOURCES_LOCATION);
         List<String> documents = Arrays.asList(documentsDirectoy.list()).stream().map(documentName -> documentsDirectoy + "\\" + documentName).collect(Collectors.toList());
 
         List<String> terms = TFIDF.getWordsFromLine(SEARCH_QUERY_2);
@@ -49,7 +49,7 @@ public class AppTest
     @Test
     public void shouldBeSherlockHolmes() throws IOException
     {
-        File documentsDirectoy = new File(constants.RESOURCES_LOCATION);
+        File documentsDirectoy = new File(Constants.RESOURCES_LOCATION);
         List<String> documents = Arrays.asList(documentsDirectoy.list()).stream().map(documentName -> documentsDirectoy + "\\" + documentName).collect(Collectors.toList());
 
         List<String> terms = TFIDF.getWordsFromLine(SEARCH_QUERY_1);

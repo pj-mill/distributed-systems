@@ -7,7 +7,7 @@ Project work based on course - Distributed Systems & Cloud Computing with Java b
 [Hadoop Zookeeper](https://zookeeper.apache.org/doc/r3.3.3/zookeeperAdmin.html)
 
 [Kafka](https://kafka.apache.org/)
-P
+
 [Spiceworks - What is Kafka](https://www.spiceworks.com/tech/data-management/articles/what-is-kafka/)
 
 ## Kafka
@@ -35,7 +35,7 @@ P
 1. Leader Re-Election (Auto Healer)
 1. Scalability & Fault Taolerence
 1. Cluster management through Service Registry & Discovery
-1. Load Balancing Strategies
-1. Message Brokers, prodcuers & consumers through Kafka
+1. Load Balancing Strategies wityh HAProxy
+1. Message Brokers, producers & consumers with Kafka
 1. Publish / Subscribe pattern
 1.
