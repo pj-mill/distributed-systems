@@ -66,11 +66,11 @@ Overall, we will have a frontend server that will communicate with a backend clu
 
 #### Search Queries
 
-![Search Queries](https://github.com/pj-mill/distributed-systems/blob/master/kafka/screenshots/kafka-fault-tolerance.PNG)
+![Search Queries](https://github.com/pj-mill/distributed-systems/blob/master/dist-search-engine/screenshots/search-queries.PNG)
 
 #### Search Results
 
-![Search Results](https://github.com/pj-mill/distributed-systems/blob/master/kafka/screenshots/kafka-fault-tolerance.PNG)
+![Search Results](https://github.com/pj-mill/distributed-systems/blob/master/dist-search-engine/screenshots/search-results.PNG)
 
 ### Resourses
 
