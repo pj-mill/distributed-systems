@@ -2,25 +2,27 @@ package distributed.systems;
 
 import java.io.IOException;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.WatchedEvent;
 import org.apache.zookeeper.Watcher;
 import org.apache.zookeeper.ZooKeeper;
 
-import distributed.systems.cluster.management.LeaderElection;
-import distributed.systems.cluster.management.OnElectionAction;
 import distributed.systems.cluster.management.ServiceRegistry;
+import distributed.systems.networking.WebServer;
+import distributed.systems.search.UserSearchHandler;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class App implements Watcher {
+    private static final String ZOOKEEPER_ADDRESS = "127.0.0.1:2181";
+    private static final int SESSION_TIMEOUT = 3000;
     private ZooKeeper zooKeeper;
+
     private static final Logger logger = LogManager.getLogger(App.class);
 
     public static void main(String[] args) throws IOException, InterruptedException, KeeperException {
-        int currentServerPort = 8090;
-
+        int currentServerPort = 9000;
         if (args.length == 1) {
             currentServerPort = Integer.parseInt(args[0]);
         }
@@ -28,25 +30,22 @@ public class App implements Watcher {
         App application = new App();
         ZooKeeper zooKeeper = application.connectToZookeeper();
 
-        ServiceRegistry workersServiceRegistry = new ServiceRegistry(zooKeeper, Constants.WORKERS_REGISTRY_ZNODE);
         ServiceRegistry coordinatorsServiceRegistry = new ServiceRegistry(zooKeeper,
-                Constants.COORDINATORS_REGISTRY_ZNODE);
+                ServiceRegistry.COORDINATORS_REGISTRY_ZNODE);
 
-        OnElectionAction onElectionAction = new OnElectionAction(workersServiceRegistry, coordinatorsServiceRegistry,
-                currentServerPort);
+        UserSearchHandler searchHandler = new UserSearchHandler(coordinatorsServiceRegistry);
+        WebServer webServer = new WebServer(currentServerPort, searchHandler);
+        webServer.startServer();
 
-        LeaderElection leaderElection = new LeaderElection(zooKeeper, onElectionAction);
-        leaderElection.volunteerForLeadership();
-        leaderElection.reelectLeader();
+        logger.info("Server is listening on port " + currentServerPort);
 
         application.run();
         application.close();
-
-        logger.info("Disconnected from Zookeeper, exiting application");
+        logger.info("Shutting down server");
     }
 
     public ZooKeeper connectToZookeeper() throws IOException {
-        this.zooKeeper = new ZooKeeper(Constants.ZOOKEEPER_ADDRESS, Constants.SESSION_TIMEOUT, this);
+        this.zooKeeper = new ZooKeeper(ZOOKEEPER_ADDRESS, SESSION_TIMEOUT, this);
         return zooKeeper;
     }
 
@@ -65,10 +64,10 @@ public class App implements Watcher {
         switch (event.getType()) {
             case None:
                 if (event.getState() == Event.KeeperState.SyncConnected) {
-                    System.out.println("Successfully connected to Zookeeper");
+                    logger.info("Successfully connected to Zookeeper");
                 } else {
                     synchronized (zooKeeper) {
-                        System.out.println("Disconnected from Zookeeper event");
+                        logger.error("Disconnected from Zookeeper event");
                         zooKeeper.notifyAll();
                     }
                 }

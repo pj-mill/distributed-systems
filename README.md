@@ -19,12 +19,13 @@ Project work based on course - Distributed Systems & Cloud Computing with Java b
 1. Cluster Coordination & Leader Election with Apache Zookeeper
 1. Watchers, Triggers & Failure Detection
 1. Leader Re-Election (Auto Healer)
-1. Scalability & Fault Taolerence
+1. Scalability & Fault Tolerence
 1. Cluster management through Service Registry & Discovery
-1. Load Balancing Strategies wityh HAProxy
-1. Message Brokers, producers & consumers with Kafka
+1. Load Balancing Strategies wityh HAProxy (Static & Dynamic Loading Balancing Algorithms)
+1. Message brokers, topics, producers & consumers with Kafka
 1. Publish / Subscribe pattern
-1. Static & Dynamic Loading Balancing Algorithms
+1. Serialisation / Deserialization with JSON & Protocol Buffers
+1.
 
 ## Sample Screenshots
 
