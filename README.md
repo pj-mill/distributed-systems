@@ -14,11 +14,11 @@ Project work based on course - Distributed Systems & Cloud Computing with Java b
 
 [Protocol Buffers](https://protobuf.dev/overview/)
 
-[Mongo DB Replication](https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start/)
+[MongDB Replication](https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start/)
 
-[Mongo DB Java Driver](https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start/)
+[MongoDB Java Driver](https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start/)
 
-[Mongo DB Sharding](https://www.mongodb.com/docs/manual/sharding/)
+[MongoDB Sharding](https://www.mongodb.com/docs/manual/sharding/)
 
 [MongoDB Indexes](https://www.mongodb.com/docs/manual/indexes/)
 
